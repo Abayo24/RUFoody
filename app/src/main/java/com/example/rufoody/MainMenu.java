@@ -28,9 +28,9 @@ public class MainMenu extends AppCompatActivity {
         signinemail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signphone = new Intent(MainMenu.this,ChooseOne.class);
-                signphone.putExtra("Home","Phone");
-                startActivity(signphone);
+                Intent signemail = new Intent(MainMenu.this,ChooseOne.class);
+                signemail.putExtra("Home","Phone");
+                startActivity(signemail);
                 finish();
             }
         });
