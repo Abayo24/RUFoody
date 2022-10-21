@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "194796980863",
+    "firebase_url": "https://rufoody-375de-default-rtdb.firebaseio.com",
+    "project_id": "rufoody-375de",
+    "storage_bucket": "rufoody-375de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194796980863:android:738fbe7ab535d41d5b4d4a",
+        "android_client_info": {
+          "package_name": "com.example.rufoody"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194796980863-9olpr2g7rcd0lvkbtp93vhfaqr1u5046.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rufoody",
+            "certificate_hash": "05e7fbe3fff18722d97a464b83e3024dab8f8359"
+          }
+        },
+        {
+          "client_id": "194796980863-jlqbigga6nlma2sebtri58u44jkg06ce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2LKowhH7zid2LBB8kIkjGcCFFAfGZoXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194796980863-jlqbigga6nlma2sebtri58u44jkg06ce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

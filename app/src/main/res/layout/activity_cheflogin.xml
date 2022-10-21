@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Don't Have An Account? Create"
+            android:text="Don't Have An Account? SignUp"
             android:textColor="#090909"
             android:textSize="16sp" />
 

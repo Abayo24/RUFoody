@@ -17,6 +17,9 @@ public class ChooseOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_one);
 
+        intent = getIntent();
+        type = intent.getStringExtra("Home").toString().trim();
+
         Chef = (Button)findViewById(R.id.chef);
         DeliveryPerson = (Button)findViewById(R.id.delivery);
         Customer = (Button)findViewById(R.id.customer);
