@@ -109,7 +109,7 @@ public class ChefRegistration extends AppCompatActivity {
                                                             @Override
                                                             public void onComplete(@NonNull Task<Void> task) {
 
-                                                                if(task.isSuccessful()){
+                                                                if (task.isSuccessful()) {
                                                                     AlertDialog.Builder builder = new AlertDialog.Builder(ChefRegistration.this);
                                                                     builder.setMessage("You Have Registered! Make Sure To Verify Your Email");
                                                                     builder.setCancelable(false);
@@ -120,17 +120,17 @@ public class ChefRegistration extends AppCompatActivity {
                                                                             dialog.dismiss();
 
                                                                             String phonenumber = Cpp.getSelectedCountryCodeWithPlus() + mobile;
-                                                                            Intent b = new Intent(ChefRegistration.this,ChefVerifyPhone.class);
-                                                                            b.putExtra("phonenumber",phonenumber);
+                                                                            Intent b = new Intent(ChefRegistration.this, ChefVerifyPhone.class);
+                                                                            b.putExtra("phonenumber", phonenumber);
                                                                             startActivity(b);
 
                                                                         }
                                                                     });
                                                                     AlertDialog Alert = builder.create();
                                                                     Alert.show();
-                                                                }else{
+                                                                } else {
                                                                     mDialog.dismiss();
-                                                                    ReusableCodeForAll.ShowAlert(ChefRegistration.this,"Error",task.getException().getMessage());
+                                                                    ReusableCodeForAll.ShowAlert(ChefRegistration.this, "Error", task.getException().getMessage());
                                                                 }
                                                             }
                                                         });
@@ -144,9 +144,24 @@ public class ChefRegistration extends AppCompatActivity {
                         }
                     });
                 }
+                //
             }
         });
+        Email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                startActivity(new Intent(ChefRegistration.this,Cheflogin.class));
+                finish();
+            }
+        });
+        Phone.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChefRegistration.this,Chefloginphone.class));
+                finish();
+            }
+        });
 
 
     }
