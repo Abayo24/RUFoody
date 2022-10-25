@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.gms.tasks.TaskExecutors;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +23,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class Chefsendotp extends AppCompatActivity {
+public class Delivery_sendotp extends AppCompatActivity {
 
     String verificationId;
     FirebaseAuth FAuth;
@@ -36,14 +35,14 @@ public class Chefsendotp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chefsendotp);
+        setContentView(R.layout.activity_delivery_sendotp);
 
-        phoneno = getIntent().getStringExtra("Phonenumber").trim();
+        phoneno = getIntent().getStringExtra("Phonenum").trim();
 
-        entercode = (EditText) findViewById(R.id.code);
-        txt = (TextView) findViewById(R.id.text);
-        Resend = (Button)findViewById(R.id.Resendotp);
-        verify = (Button) findViewById(R.id.Verify);
+        entercode = (EditText) findViewById(R.id.code1);
+        txt = (TextView) findViewById(R.id.text1);
+        Resend = (Button)findViewById(R.id.Resendotp1);
+        verify = (Button) findViewById(R.id.Verify1);
         FAuth = FirebaseAuth.getInstance();
 
         Resend.setVisibility(View.INVISIBLE);
@@ -101,7 +100,7 @@ public class Chefsendotp extends AppCompatActivity {
                     public void onTick(long millisUntilFinished) {
 
                         txt.setVisibility(View.VISIBLE);
-                        txt.setText("Resend Code Within"+millisUntilFinished/1000+"Seconds");
+                        txt.setText("Resend Code Within "+millisUntilFinished/1000+" Seconds");
 
                     }
 
@@ -117,6 +116,7 @@ public class Chefsendotp extends AppCompatActivity {
                 }.start();
             }
         });
+
 
     }
 
@@ -150,7 +150,7 @@ public class Chefsendotp extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
-            Toast.makeText(Chefsendotp.this , e.getMessage(),Toast.LENGTH_LONG).show();
+            Toast.makeText(Delivery_sendotp.this , e.getMessage(),Toast.LENGTH_LONG).show();
 
         }
 
@@ -177,11 +177,11 @@ public class Chefsendotp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-                            startActivity(new Intent(Chefsendotp.this,ChefFoodPanel_BottomNavigation.class));
+                            startActivity(new Intent(Delivery_sendotp.this,DeliveryFoodPanel_BottomNavigation.class));
                             finish();
 
                         }else{
-                            ReusableCodeForAll.ShowAlert(Chefsendotp.this,"Error",task.getException().getMessage());
+                            ReusableCodeForAll.ShowAlert(Delivery_sendotp.this,"Error",task.getException().getMessage());
                         }
 
                     }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChefVerifyPhone">
+    tools:context=".VerifyPhone">
 
     <LinearLayout
         android:layout_width="280dp"
@@ -33,13 +33,13 @@
             android:layout_marginTop="15dp"
             android:hint="OTP"
             android:ems="10"
-            android:id="@+id/code"/>
+            android:id="@+id/codee"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:id="@+id/Verify"
-            android:background="@color/Black"
+            android:id="@+id/Verifyy"
+            android:background="@drawable/btnblueish"
             android:text="Verify"
             android:textSize="18sp"
             android:textColor="@color/white"/>
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:id="@+id/Resendotp"
+            android:id="@+id/Resendotpp"
             android:textColor="@color/white"
             android:text="Resend OTP"
             android:background="@color/Black"

@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.gms.tasks.TaskExecutors;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +23,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class Chefsendotp extends AppCompatActivity {
+public class Delivery_VerifyPhone extends AppCompatActivity {
 
     String verificationId;
     FirebaseAuth FAuth;
@@ -33,17 +32,18 @@ public class Chefsendotp extends AppCompatActivity {
     EditText entercode;
     String phoneno;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chefsendotp);
+        setContentView(R.layout.activity_delivery_verify_phone);
 
-        phoneno = getIntent().getStringExtra("Phonenumber").trim();
+        phoneno = getIntent().getStringExtra("phonenumber").trim();
 
-        entercode = (EditText) findViewById(R.id.code);
-        txt = (TextView) findViewById(R.id.text);
-        Resend = (Button)findViewById(R.id.Resendotp);
-        verify = (Button) findViewById(R.id.Verify);
+        entercode = (EditText) findViewById(R.id.Dcode);
+        txt = (TextView) findViewById(R.id.textt);
+        Resend = (Button)findViewById(R.id.Resendcode);
+        verify = (Button) findViewById(R.id.Verifycode);
         FAuth = FirebaseAuth.getInstance();
 
         Resend.setVisibility(View.INVISIBLE);
@@ -73,7 +73,7 @@ public class Chefsendotp extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
 
                 txt.setVisibility(View.VISIBLE);
-                txt.setText("Resend Code Within "+millisUntilFinished/1000+" Seconds");
+                txt.setText("Resend Code Within"+millisUntilFinished/1000+"Seconds");
 
             }
 
@@ -101,7 +101,7 @@ public class Chefsendotp extends AppCompatActivity {
                     public void onTick(long millisUntilFinished) {
 
                         txt.setVisibility(View.VISIBLE);
-                        txt.setText("Resend Code Within"+millisUntilFinished/1000+"Seconds");
+                        txt.setText("Resend Code Within "+millisUntilFinished/1000+" Seconds");
 
                     }
 
@@ -118,13 +118,12 @@ public class Chefsendotp extends AppCompatActivity {
             }
         });
 
-    }
 
+    }
     private void Resendotp(String phonenum) {
 
         sendverificationcode(phonenum);
     }
-
 
     private void sendverificationcode(String number) {
 
@@ -150,7 +149,7 @@ public class Chefsendotp extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
-            Toast.makeText(Chefsendotp.this , e.getMessage(),Toast.LENGTH_LONG).show();
+            Toast.makeText(Delivery_VerifyPhone.this , e.getMessage(),Toast.LENGTH_LONG).show();
 
         }
 
@@ -166,24 +165,24 @@ public class Chefsendotp extends AppCompatActivity {
     private void verifyCode(String code) {
 
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId , code);
-        signInWithPhone(credential);
+        linkCredential(credential);
     }
 
-    private void signInWithPhone(PhoneAuthCredential credential) {
+    private void linkCredential(PhoneAuthCredential credential) {
 
-        FAuth.signInWithCredential(credential)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        FAuth.getCurrentUser().linkWithCredential(credential)
+                .addOnCompleteListener(Delivery_VerifyPhone.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-                            startActivity(new Intent(Chefsendotp.this,ChefFoodPanel_BottomNavigation.class));
+
+                            Intent intent = new Intent(Delivery_VerifyPhone.this , MainMenu.class);
+                            startActivity(intent);
                             finish();
-
                         }else{
-                            ReusableCodeForAll.ShowAlert(Chefsendotp.this,"Error",task.getException().getMessage());
+                            ReusableCodeForAll.ShowAlert(Delivery_VerifyPhone.this,"Error",task.getException().getMessage());
                         }
-
                     }
                 });
     }

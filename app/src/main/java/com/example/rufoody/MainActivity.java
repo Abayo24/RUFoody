@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 if(Fauth.getCurrentUser()!=null){
                     if(Fauth.getCurrentUser().isEmailVerified()){
                         Fauth=FirebaseAuth.getInstance();
-
+                       // Autosignin
                         databaseReference = FirebaseDatabase.getInstance().getReference("User").child(FirebaseAuth.getInstance().getUid()+"/Role");
                         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
@@ -70,6 +70,16 @@ public class MainActivity extends AppCompatActivity {
                                 String role = snapshot.getValue(String.class);
                                 if(role.equals("Chef")){
                                     startActivity(new Intent(MainActivity.this,ChefFoodPanel_BottomNavigation.class));
+                                    finish();
+
+                                }
+                                if(role.equals("Customer")){
+                                    startActivity(new Intent(MainActivity.this,CustomerFoofPanel_BottomNavigation.class));
+                                    finish();
+
+                                }
+                                if(role.equals("DeliveryPerson")){
+                                    startActivity(new Intent(MainActivity.this,DeliveryFoodPanel_BottomNavigation.class));
                                     finish();
 
                                 }

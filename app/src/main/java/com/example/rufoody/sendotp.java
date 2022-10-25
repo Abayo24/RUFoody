@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.gms.tasks.TaskExecutors;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +23,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class Chefsendotp extends AppCompatActivity {
+public class sendotp extends AppCompatActivity {
 
     String verificationId;
     FirebaseAuth FAuth;
@@ -36,7 +35,7 @@ public class Chefsendotp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chefsendotp);
+        setContentView(R.layout.activity_sendotp);
 
         phoneno = getIntent().getStringExtra("Phonenumber").trim();
 
@@ -48,7 +47,6 @@ public class Chefsendotp extends AppCompatActivity {
 
         Resend.setVisibility(View.INVISIBLE);
         txt.setVisibility(View.INVISIBLE);
-
         sendverificationcode(phoneno);
 
         verify.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +99,7 @@ public class Chefsendotp extends AppCompatActivity {
                     public void onTick(long millisUntilFinished) {
 
                         txt.setVisibility(View.VISIBLE);
-                        txt.setText("Resend Code Within"+millisUntilFinished/1000+"Seconds");
+                        txt.setText("Resend Code Within "+millisUntilFinished/1000+" Seconds");
 
                     }
 
@@ -117,7 +115,6 @@ public class Chefsendotp extends AppCompatActivity {
                 }.start();
             }
         });
-
     }
 
     private void Resendotp(String phonenum) {
@@ -150,7 +147,7 @@ public class Chefsendotp extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
-            Toast.makeText(Chefsendotp.this , e.getMessage(),Toast.LENGTH_LONG).show();
+            Toast.makeText(sendotp.this , e.getMessage(),Toast.LENGTH_LONG).show();
 
         }
 
@@ -177,11 +174,11 @@ public class Chefsendotp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-                            startActivity(new Intent(Chefsendotp.this,ChefFoodPanel_BottomNavigation.class));
+                            startActivity(new Intent(sendotp.this,CustomerFoofPanel_BottomNavigation.class));
                             finish();
 
                         }else{
-                            ReusableCodeForAll.ShowAlert(Chefsendotp.this,"Error",task.getException().getMessage());
+                            ReusableCodeForAll.ShowAlert(sendotp.this,"Error",task.getException().getMessage());
                         }
 
                     }
