@@ -20,8 +20,8 @@
         android:layout_marginBottom="1dp"
         android:background="?android:attr/windowBackground"
         android:backgroundTint="@color/white"
-        app:itemIconTint="@color/purple"
-        app:itemTextColor="@color/purple"
+        app:itemIconTint="@color/menu_item_color"
+        app:itemTextColor="@color/menu_item_color"
         app:menu="@menu/chef_bottom_navigation" />
 
 </RelativeLayout>

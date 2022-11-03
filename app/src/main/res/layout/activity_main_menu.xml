@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:background="@drawable/btnblueish"
+            android:background="@drawable/button_shape"
             android:drawableLeft="@drawable/phonewhite"
             android:gravity="center_horizontal|center_vertical"
             android:paddingLeft="10dp"

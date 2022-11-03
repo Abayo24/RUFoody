@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Black"
+    android:background="@color/purple"
     tools:context=".MainActivity">
 
 
@@ -15,7 +15,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:adjustViewBounds="false"
-        android:src="@drawable/logo"
+        android:src="@drawable/ruf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
@@ -24,14 +24,12 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="217dp"
+        android:layout_width="250dp"
         android:layout_height="30dp"
-        android:fontFamily="monospace"
-        android:text="Home Made"
+        android:text="The Belly Rules the Mind"
         android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#FDFDFD"
-        android:textSize="17sp"
+        android:textColor="@color/purple"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

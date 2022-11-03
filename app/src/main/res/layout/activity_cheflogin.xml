@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:id="@+id/linearlayout"
-        android:layout_width="280dp"
+        android:layout_width="300dp"
         android:layout_height="485dp"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="210dp"
@@ -32,9 +32,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_baseline_email_24"
                 android:drawablePadding="10dp"
-                android:hint="Email id"
+                android:hint="Email"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,17 +59,17 @@
             android:layout_height="wrap_content"
             android:gravity="end"
             android:text="Forgot Password?"
-            android:textColor="#090909"
+            android:textColor="@color/purple"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="match_parent"
-            android:layout_height="59dp"
+            android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_shape"
             android:text="Login"
-            android:textColor="#FFFF"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
@@ -80,7 +79,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:text="Don't Have An Account? SignUp"
-            android:textColor="#090909"
+            android:textColor="@color/purple"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -94,7 +93,7 @@
                 android:layout_width="103dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="20dp"
-                android:background="#090909" />
+                android:background="@color/purple" />
 
             <TextView
                 android:id="@+id/OR"
@@ -103,14 +102,14 @@
                 android:layout_marginTop="10dp"
                 android:text="OR"
                 android:textAlignment="center"
-                android:textColor="#090909" />
+                android:textColor="@color/purple" />
 
             <TableRow
                 android:id="@+id/dr"
                 android:layout_width="103dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="20dp"
-                android:background="#090909" />
+                android:background="@color/purple" />
         </LinearLayout>
 
         <TextView
@@ -121,19 +120,18 @@
             android:layout_marginTop="11dp"
             android:text="SignIn With"
             android:textAlignment="center"
-            android:textColor="#090909"
+            android:textColor="@color/purple"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnphone"
-            android:layout_width="105dp"
-            android:layout_height="52dp"
+            android:layout_width="155dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="13dp"
-            android:background="@drawable/btnblueish"
-            android:drawableLeft="@drawable/phonewhite"
+            android:background="@drawable/button_shape"
             android:padding="10dp"
-            android:text="Phone"
+            android:text="Mobile Phone"
             android:textColor="#FFFF" />
     </LinearLayout>
 

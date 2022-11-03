@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="Enter OTP"
             android:textSize="20sp"
-            android:textColor="@color/Black"
+            android:textColor="@color/purple"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"/>
 
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:id="@+id/Verify"
-            android:background="@color/Black"
+            android:background="@drawable/button_shape"
             android:text="Verify"
             android:textSize="18sp"
             android:textColor="@color/white"/>
@@ -50,7 +50,7 @@
             android:id="@+id/Resendotp"
             android:textColor="@color/white"
             android:text="Resend OTP"
-            android:background="@color/Black"
+            android:background="@drawable/button_shape"
             android:textSize="18sp"/>
         <TextView
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             android:text=""
             android:layout_marginTop="15dp"
             android:textAlignment="center"
-            android:textColor="@color/gray"
+            android:textColor="@color/purple"
             android:textSize="16sp"/>
 
 

@@ -13,7 +13,7 @@
 
     <LinearLayout
         android:id="@+id/linearlayout"
-        android:layout_width="256dp"
+        android:layout_width="300dp"
         android:layout_height="450dp"
         android:orientation="vertical"
         android:padding="15dp"
@@ -30,33 +30,39 @@
             android:layout_marginRight="4dp"
             android:text="SignIn As"
             android:textAlignment="center"
-            android:textColor="#000000"
+            android:textColor="@color/purple"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/chef"
             android:layout_width="250dp"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/white"
             android:text="Chef"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/customer"
             android:layout_width="250dp"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/white"
             android:text="customer"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/delivery"
             android:layout_width="250dp"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/white"
             android:text="delivery person"
             android:textSize="18sp" />
     </LinearLayout>

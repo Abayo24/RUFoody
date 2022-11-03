@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#060007"
+    android:background="@color/white"
     tools:context=".ChefRegistration">
 
     <ScrollView
-        android:layout_width="280dp"
+        android:layout_width="300dp"
         android:layout_height="430dp"
         android:background="@drawable/background_shape"
         android:orientation="vertical"
@@ -130,7 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
-                android:background="#000000"
+                android:background="@drawable/button_shape"
                 android:text="Register"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"

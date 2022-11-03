@@ -24,7 +24,7 @@
             android:text="Verify Phone Number"
             android:layout_gravity="center"
             android:textSize="20sp"
-            android:textColor="#090909"
+            android:textColor="@color/purple"
             android:layout_marginTop="20dp"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,7 +59,7 @@
             android:layout_marginTop="13dp"
             android:text="Don't Have An Account? SignUp"
             android:textAlignment="center"
-            android:textColor="@color/Black"
+            android:textColor="@color/purple"
             android:textSize="16sp"/>
 
         <LinearLayout
@@ -74,14 +74,14 @@
                 android:layout_width="107dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/Black"/>
+                android:background="@color/purple"/>
             <TextView
                 android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/OR"
                 android:layout_gravity="center"
                 android:text="OR"
-                android:textColor="@color/Black"
+                android:textColor="@color/purple"
                 android:layout_marginTop="6dp"
                 android:textSize="16sp"
                 android:textAlignment="center"/>
@@ -91,7 +91,7 @@
                 android:layout_width="107dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/Black"/>
+                android:background="@color/purple"/>
 
         </LinearLayout>
 
@@ -102,17 +102,16 @@
             android:layout_marginTop="20dp"
             android:text="SignIn With"
             android:textAlignment="center"
-            android:textColor="@color/Black"
+            android:textColor="@color/purple"
             android:textSize="18sp"/>
 
         <Button
             android:id="@+id/btnEmail"
-            android:layout_width="105dp"
+            android:layout_width="155dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:background="@drawable/btnred"
-            android:drawableLeft="@drawable/whitemail"
+            android:background="@drawable/button_shape"
             android:padding="10dp"
             android:text="Email"
             android:textColor="@color/white" />
